@@ -1,0 +1,34 @@
+<!doctype html>
+<title>Graph of authors</title>
+<h1>Your query</h1>
+<form method="POST">
+    <label name='l_query'>Query (key word)</label>
+    <br>
+    <input type="text" name="query" value="">
+    <br>
+    <label name='l_f_year'>From year:</label>
+    <br>
+    <input type="text" name="f_year" value="">
+    <br>
+    <label name='l_t_year'>To year:</label>
+    <br>
+    <input type="text" name="t_year" value="">
+    <br>
+    <label name='l_numb'>Number of publications</label>
+    <br>
+    <input type="text" name="numb" value="">
+    <br>
+    <br>
+    <input type="submit" name="submit" value="Search">
+    <input type="submit" name="submit" value="Plot graph">
+    {% if result %}
+    <p>
+        <label name='result'>{{ result }}</label>
+    </p>
+    {% endif %}
+    {% if error %}
+    <p>
+    <label name="error">{{ error }}</label>
+    </p>
+    {% endif %}
+</form>
